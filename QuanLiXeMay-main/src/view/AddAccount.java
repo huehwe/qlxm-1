@@ -11,7 +11,7 @@ import dao.AccountDAO;
 
 /**
  *
- * @author
+ * @author bao hoang
  */
 public class AddAccount extends javax.swing.JDialog {
 
@@ -59,46 +59,47 @@ public class AddAccount extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Thêm tài khoản mới");
 
-        jPanel1.setBackground(new java.awt.Color(247, 247, 247));
+        jPanel1.setBackground(new java.awt.Color(245, 245, 220));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(204, 204, 204), new java.awt.Color(255, 204, 153)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jLabel2.setText("Tên tài khoản");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 130, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 120, -1));
 
-        txtfullname.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
+        txtfullname.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         txtfullname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtfullnameActionPerformed(evt);
             }
         });
-        jPanel1.add(txtfullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 200, 38));
+        jPanel1.add(txtfullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 298, 38));
 
-        jLabel3.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jLabel3.setText("Tên đăng nhập");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 130, 24));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 24));
 
-        txtusername.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
-        jPanel1.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 200, 38));
+        txtusername.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        jPanel1.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 298, 38));
 
-        jLabel4.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jLabel4.setText("Mật khẩu");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 90, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 80, -1));
 
-        txtpassword.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
-        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 300, 38));
+        txtpassword.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 298, 38));
 
-        jLabel5.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jLabel5.setText("Vai trò");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 70, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 60, -1));
 
-        vaitro.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
+        vaitro.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         vaitro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quản lý kho", "Nhân viên nhập", "Nhân viên xuất" }));
         vaitro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(vaitro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 200, 38));
+        jPanel1.add(vaitro, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 298, 38));
 
-        jButton1.setBackground(new java.awt.Color(146, 154, 171));
-        jButton1.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
+        jButton1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Yellow"));
+        jButton1.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Thêm");
         jButton1.setBorder(null);
@@ -113,21 +114,23 @@ public class AddAccount extends javax.swing.JDialog {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 140, 38));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 140, 38));
 
-        jButton2.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(211, 211, 211));
+        jButton2.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jButton2.setText("Huỷ");
+        jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 140, 38));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, 140, 38));
 
-        jPanel2.setBackground(new java.awt.Color(146, 154, 171));
+        jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Yellow"));
 
-        jLabel1.setFont(new java.awt.Font("iCiel Gotham Medium", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("THÊM TÀI KHOẢN");
 
@@ -135,27 +138,27 @@ public class AddAccount extends javax.swing.JDialog {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(322, 322, 322)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(97, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addGap(83, 83, 83))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 70));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 70));
 
-        jLabel6.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("UTM Avo", 0, 16)); // NOI18N
         jLabel6.setText("Email");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 50, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 50, -1));
 
-        txtEmail.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
-        jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 300, 40));
+        txtEmail.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 300, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,7 +168,7 @@ public class AddAccount extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -198,7 +201,7 @@ public class AddAccount extends javax.swing.JDialog {
                     homeAcc.loadDataToTable(AccountDAO.getInstance().selectAll());
                     JOptionPane.showMessageDialog(this, "Thêm thành công !");
                 } else {
-                    JOptionPane.showMessageDialog(this, "Email được nhập không đúng định dạng!", "Cảnh báo =", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Vui lòng nhập email đúng định dạng !", "Cảnh báo =", JOptionPane.WARNING_MESSAGE);
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "Tên đăng nhập đã tồn tại !", "Cảnh báo", JOptionPane.WARNING_MESSAGE);
@@ -215,25 +218,7 @@ public class AddAccount extends javax.swing.JDialog {
         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
         return email.matches(regex);
     }
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) throws UnsupportedLookAndFeelException {
-//        UIManager.setLookAndFeel(new FlatLightLaf());
-//        /* Create and display the dialog */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                AddAccount dialog = new AddAccount(new javax.swing.JFrame(), true);
-//                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-//                    @Override
-//                    public void windowClosing(java.awt.event.WindowEvent e) {
-//                        System.exit(0);
-//                    }
-//                });
-//                dialog.setVisible(true);
-//            }
-//        });
-//    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
