@@ -457,7 +457,7 @@ public class AddProduct extends javax.swing.JDialog {
             String congSuat = txtcongSuat.getText();
             int khoiLuong = 0;
             try {
-                khoiLuong = Integer.parseInt(txtDonGia.getText());
+                khoiLuong = Integer.parseInt(txtkhoiLuong.getText());
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, "Vui lòng nhập khối lượng ở dạng số !");
                 valid = false;
