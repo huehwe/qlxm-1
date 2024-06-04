@@ -114,7 +114,6 @@ public class AccountForm extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         cbxLuachon = new javax.swing.JComboBox<>();
         txtSearch = new javax.swing.JTextField();
-        btnreset = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAccount = new javax.swing.JTable();
 
@@ -210,6 +209,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         jToolBar1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jToolBar1.setRollover(true);
 
+        btnAdd.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_add_40px.png"))); // NOI18N
         btnAdd.setText("Thêm");
         btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -223,6 +223,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         });
         jToolBar1.add(btnAdd);
 
+        btnDeleteAccount.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         btnDeleteAccount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_delete_40px.png"))); // NOI18N
         btnDeleteAccount.setText("Xoá");
         btnDeleteAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -236,6 +237,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         });
         jToolBar1.add(btnDeleteAccount);
 
+        btnEditAccount.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         btnEditAccount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_edit_40px.png"))); // NOI18N
         btnEditAccount.setText("Sửa");
         btnEditAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -249,6 +251,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         });
         jToolBar1.add(btnEditAccount);
 
+        btnEditAccount1.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         btnEditAccount1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-update-left-rotation-40.png"))); // NOI18N
         btnEditAccount1.setText("Đặt lại");
         btnEditAccount1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -263,6 +266,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         jToolBar1.add(btnEditAccount1);
         jToolBar1.add(jSeparator1);
 
+        exportExcel.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         exportExcel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_spreadsheet_file_40px.png"))); // NOI18N
         exportExcel.setText("Xuất Excel");
         exportExcel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -275,6 +279,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         });
         jToolBar1.add(exportExcel);
 
+        importExcel.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         importExcel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_xls_40px.png"))); // NOI18N
         importExcel.setText("Nhập Excel");
         importExcel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -288,12 +293,13 @@ public class AccountForm extends javax.swing.JInternalFrame {
         });
         jToolBar1.add(importExcel);
 
-        jPanel2.add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 730));
+        jPanel2.add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 750));
 
         jPanel3.setBackground(new java.awt.Color(247, 247, 247));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Tìm kiếm"));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cbxLuachon.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         cbxLuachon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Tên tài khoản", "Tên đăng nhập", "Vai trò" }));
         jPanel3.add(cbxLuachon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 130, 40));
 
@@ -322,22 +328,13 @@ public class AccountForm extends javax.swing.JInternalFrame {
                 txtSearchKeyReleased(evt);
             }
         });
-        jPanel3.add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 320, 40));
-
-        btnreset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_reset_25px_1.png"))); // NOI18N
-        btnreset.setText("Làm mới");
-        btnreset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnreset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnresetActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnreset, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 170, 40));
+        jPanel3.add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 890, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 1090, 90));
 
         jScrollPane1.setBorder(null);
 
+        tblAccount.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 12)); // NOI18N
         tblAccount.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -351,7 +348,7 @@ public class AccountForm extends javax.swing.JInternalFrame {
         tblAccount.setShowGrid(true);
         jScrollPane1.setViewportView(tblAccount);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 1100, 630));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 1100, 650));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 750));
 
@@ -494,11 +491,6 @@ public class AccountForm extends javax.swing.JInternalFrame {
         // TODO add your handling code here: 
     }//GEN-LAST:event_txtSearchInputMethodTextChanged
 
-    private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
-        // TODO add your handling code here:
-        loadDataToTable(accounts);
-    }//GEN-LAST:event_btnresetActionPerformed
-
     private void txtSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyPressed
         // TODO add your handling code here:
 
@@ -569,7 +561,6 @@ public class AccountForm extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnDeleteAccount;
     private javax.swing.JButton btnEditAccount;
     private javax.swing.JButton btnEditAccount1;
-    private javax.swing.JButton btnreset;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbxLuachon;
     private javax.swing.JButton exportExcel;

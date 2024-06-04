@@ -88,9 +88,9 @@ public class CTThongKeAcc extends javax.swing.JDialog {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
+        jPanel2.setBackground(new java.awt.Color(146, 154, 171));
 
-        jLabel1.setFont(new java.awt.Font("SF Pro Display", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("iCiel Gotham Medium", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText(" PHIẾU ");
@@ -112,7 +112,7 @@ public class CTThongKeAcc extends javax.swing.JDialog {
                 .addGap(14, 14, 14))
         );
 
-        tblChiTietPhieu.setFont(new java.awt.Font("SF Pro Display", 0, 16)); // NOI18N
+        tblChiTietPhieu.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
         tblChiTietPhieu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -123,7 +123,7 @@ public class CTThongKeAcc extends javax.swing.JDialog {
         ));
         jScrollPane1.setViewportView(tblChiTietPhieu);
 
-        jLabel4.setFont(new java.awt.Font("SF Pro Display", 0, 16)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("iCiel Gotham Medium", 0, 16)); // NOI18N
         jLabel4.setText("Người tạo:");
 
         labelNguoiTao.setFont(new java.awt.Font("SF Pro Display", 0, 16)); // NOI18N
@@ -138,8 +138,8 @@ public class CTThongKeAcc extends javax.swing.JDialog {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(labelNguoiTao, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))

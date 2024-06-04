@@ -59,9 +59,7 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
         jDateChooserTo.setDateFormatString("dd/MM/yyyy");
         jDateChooserFromPr.setDateFormatString("dd/MM/yyyy");
         jDateChooserToPr.setDateFormatString("dd/MM/yyyy");
-        txtQuantityProduct.setText(Integer.toString(XeMayDAO.getInstance().getSl()));
-        txtQuantityNcc.setText(Integer.toString(NhaCungCapDAO.getInstance().selectAll().size()));
-        txtQuantityUser.setText(Integer.toString(AccountDAO.getInstance().selectAll().size()));
+        
         //
         initTable();
         loadDataToTable();
@@ -186,14 +184,12 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
         jDateChooserToPr = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        btnResetThongKePr = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jToolBar1 = new javax.swing.JToolBar();
         btnDetail = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jComboBoxLuaChon = new javax.swing.JComboBox<>();
         jTextFieldSearch = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPhieuNhap = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
@@ -215,17 +211,9 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
         jPanel7 = new javax.swing.JPanel();
         jComboBoxLuaChon1 = new javax.swing.JComboBox<>();
         jTextFieldSearch1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblAccount = new javax.swing.JTable();
         jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        txtQuantityProduct = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        txtQuantityUser = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        txtQuantityNcc = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(null);
@@ -297,15 +285,6 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Từ");
         jPanel13.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 20, 20));
-
-        btnResetThongKePr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_reset_25px_1.png"))); // NOI18N
-        btnResetThongKePr.setText("Làm mới");
-        btnResetThongKePr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetThongKePrActionPerformed(evt);
-            }
-        });
-        jPanel13.add(btnResetThongKePr, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 140, 40));
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -392,17 +371,7 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
                 jTextFieldSearchKeyReleased(evt);
             }
         });
-        jPanel3.add(jTextFieldSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 310, 40));
-
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_reset_25px_1.png"))); // NOI18N
-        jButton7.setText("Làm mới");
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 140, 40));
+        jPanel3.add(jTextFieldSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 480, 40));
 
         tblPhieuNhap.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -602,15 +571,6 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
         });
         jPanel7.add(jTextFieldSearch1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 320, 40));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_reset_25px_1.png"))); // NOI18N
-        jButton1.setText("Làm mới");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel7.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 160, 40));
-
         tblAccount.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null}
@@ -669,108 +629,26 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
 
         jTabbedPane1.addTab("Tài khoản", jPanel5);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, 630));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 750));
 
         jPanel8.setBackground(new java.awt.Color(247, 247, 247));
-
-        jPanel9.setBackground(new java.awt.Color(146, 154, 171));
-
-        txtQuantityProduct.setFont(new java.awt.Font("SF Pro Display", 1, 36)); // NOI18N
-        txtQuantityProduct.setForeground(new java.awt.Color(146, 154, 171));
-        txtQuantityProduct.setText("100");
-
-        jLabel10.setFont(new java.awt.Font("SF Pro Display", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(146, 154, 171));
-        jLabel10.setText("Sản phẩm trong kho");
-
-        txtQuantityUser.setFont(new java.awt.Font("SF Pro Display", 1, 36)); // NOI18N
-        txtQuantityUser.setForeground(new java.awt.Color(146, 154, 171));
-        txtQuantityUser.setText("100");
-
-        jLabel17.setFont(new java.awt.Font("SF Pro Display", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(146, 154, 171));
-        jLabel17.setText("Tài khoản người dùng");
-
-        txtQuantityNcc.setFont(new java.awt.Font("SF Pro Display", 1, 36)); // NOI18N
-        txtQuantityNcc.setForeground(new java.awt.Color(146, 154, 171));
-        txtQuantityNcc.setText("100");
-
-        jLabel14.setFont(new java.awt.Font("SF Pro Display", 0, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(146, 154, 171));
-        jLabel14.setText("Nhà cung cấp ");
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQuantityNcc, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQuantityUser, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17))
-                .addGap(201, 201, 201)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtQuantityProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
-                .addGap(265, 265, 265))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtQuantityNcc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(txtQuantityUser, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel17))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(txtQuantityProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10))))
-        );
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 1190, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+            .addGap(0, 10, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 130));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 10));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        loadDataToTable();
-        jComboBoxLuaChon.setSelectedIndex(0);
-        jTextFieldSearch.setText("");
-        jDateChooserFrom.setCalendar(null);
-        jDateChooserTo.setCalendar(null);
-        giaDen.setText("");
-        giaTu.setText("");
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void giaDenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_giaDenActionPerformed
         // TODO add your handling code here:
@@ -953,21 +831,6 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jDateChooserToPrKeyReleased
 
-    private void btnResetThongKePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetThongKePrActionPerformed
-        // TODO add your handling code here:
-        txtNamePr.setText("");
-        jDateChooserFromPr.setCalendar(null);
-        jDateChooserToPr.setCalendar(null);
-        loadDataToTableThongKeProduct(ThongKeDAO.getInstance().getThongKe());
-    }//GEN-LAST:event_btnResetThongKePrActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        jComboBoxLuaChon1.setSelectedIndex(0);
-        jTextFieldSearch1.setText("");
-        loadDataToTableAcc(AccountDAO.getInstance().selectAll());
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     public Phieu getPhieuNhapSelect() {
         int i_row = tblPhieuNhap.getSelectedRow();
         Phieu pn = PhieuNhapDAO.getInstance().selectById(tblModel.getValueAt(i_row, 1).toString());
@@ -1025,11 +888,8 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDetail;
-    private javax.swing.JButton btnResetThongKePr;
     private javax.swing.JTextField giaDen;
     private javax.swing.JTextField giaTu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBoxLuaChon;
     private javax.swing.JComboBox<String> jComboBoxLuaChon1;
     private com.toedter.calendar.JDateChooser jDateChooserFrom;
@@ -1037,9 +897,6 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JDateChooser jDateChooserTo;
     private com.toedter.calendar.JDateChooser jDateChooserToPr;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1059,7 +916,6 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1073,9 +929,6 @@ public class ThongKeForm extends javax.swing.JInternalFrame {
     private javax.swing.JTable tblThongKeProduct;
     private javax.swing.JLabel tongTien;
     private javax.swing.JTextField txtNamePr;
-    private javax.swing.JLabel txtQuantityNcc;
-    private javax.swing.JLabel txtQuantityProduct;
-    private javax.swing.JLabel txtQuantityUser;
     // End of variables declaration//GEN-END:variables
 
     public void searchAllRepect() throws ParseException {

@@ -113,7 +113,6 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         cbxlLuaChon = new javax.swing.JComboBox<>();
         txtSearchForm = new javax.swing.JTextField();
-        btnReset = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblNCC = new javax.swing.JTable();
 
@@ -267,7 +266,7 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
         });
         jToolBar1.add(importExcel);
 
-        jPanel2.add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 730));
+        jPanel2.add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 790));
 
         jPanel3.setBackground(new java.awt.Color(247, 247, 247));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Tìm kiếm"));
@@ -275,7 +274,7 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
 
         cbxlLuaChon.setFont(new java.awt.Font("SF Pro Display", 0, 15)); // NOI18N
         cbxlLuaChon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Mã nhà cung cấp", "Tên nhà cung cấp", "Số điện thoại", "Địa chỉ" }));
-        jPanel3.add(cbxlLuaChon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 150, 40));
+        jPanel3.add(cbxlLuaChon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 230, 40));
 
         txtSearchForm.setFont(new java.awt.Font("SF Pro Display", 0, 15)); // NOI18N
         txtSearchForm.addActionListener(new java.awt.event.ActionListener() {
@@ -291,19 +290,9 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
                 txtSearchFormKeyReleased(evt);
             }
         });
-        jPanel3.add(txtSearchForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 400, 40));
+        jPanel3.add(txtSearchForm, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 780, 40));
 
-        btnReset.setFont(new java.awt.Font("SF Pro Display", 0, 15)); // NOI18N
-        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_reset_25px_1.png"))); // NOI18N
-        btnReset.setText("Làm mới");
-        btnReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 120, 40));
-
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 1100, 90));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 1290, 90));
 
         jScrollPane1.setBorder(null);
 
@@ -321,9 +310,9 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tblNCC);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 1100, 630));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 1100, 690));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 750));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 820));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -448,13 +437,6 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_importExcelActionPerformed
 
-    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
-        // TODO add your handling code here:
-        txtSearchForm.setText("");
-        cbxlLuaChon.setSelectedIndex(0);
-        loadDataToTable(NhaCungCapDAO.getInstance().selectAll());
-    }//GEN-LAST:event_btnResetActionPerformed
-
     private void txtSearchFormKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchFormKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchFormKeyPressed
@@ -491,7 +473,6 @@ public class NhaCungCapForm extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnReset;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbxlLuaChon;
     private javax.swing.JButton exportExcel;
